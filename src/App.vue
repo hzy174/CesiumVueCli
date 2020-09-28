@@ -8,21 +8,21 @@
         <el-header class="eHeader">
           <top_nav></top_nav>
         </el-header>
-        <el-main style="height: 87.5vh">
+        <el-main style="height: 86vh">
           <transition name="fade" mode="out-in">
             <router-view></router-view>
           </transition>
         </el-main>
-<!--        <el-footer style="border:1px solid green;">Footer</el-footer>-->
+        <!--        <el-footer style="border:1px solid green;">Footer</el-footer>-->
       </el-container>
     </el-container>
-
   </div>
 </template>
 
 <script>
   import left_nav from './components/left-nav'
   import top_nav from './components/top-nav'
+
   export default {
     name: 'App',
     components: {
@@ -33,9 +33,10 @@
 </script>
 
 <style>
-  *{
+  * {
     margin: 0px;
   }
+
   .eHeader {
     margin: 0px;
     padding: 0px;
@@ -64,5 +65,9 @@
   .fade-leave-active {
     opacity: 0;
     transition: opacity .8s;
+  }
+
+  .el-main {
+    padding: 0px;
   }
 </style>

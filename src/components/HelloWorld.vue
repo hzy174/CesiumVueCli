@@ -1,8 +1,11 @@
 <template>
+<!--  <div id="cesiumContainer"></div>-->
   <div>main</div>
 </template>
 <script>
   import axios from 'axios';
+  import '../../static/Cesium/Widgets/widgets.css'
+  import * as Cesium from "Cesium";
 
   export default {
     name: "HelloWorld",
@@ -11,21 +14,12 @@
     },
     methods: {},
     mounted() {
+      let viewer = new Cesium.Viewer('cesiumContainer')
     }
   };
 </script>
-<style lang="css" scoped>
-  .box {
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    background-color: skyblue;
-    margin-top: 20px;
-    color: #fff;
-    text-align: center;
-    line-height: 200px;
-  }
 
+<style lang="css" scoped>
   /* 可以设置不同的进入和离开动画 */
   /* 设置持续时间和动画函数 */
   .slide-fade-enter-active {
@@ -41,5 +35,9 @@
   {
     transform: translateX(30px);
     opacity: 0;
+  }
+
+  #cesiumContainer {
+    height: 100%;
   }
 </style>
